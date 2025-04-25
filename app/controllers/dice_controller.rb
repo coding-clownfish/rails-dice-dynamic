@@ -1,6 +1,6 @@
 class DiceController < ApplicationController
   
-  def two_six
+  def num1_num2
 
     @num_dice = params.fetch("number_of_dice").to_i
     @sides_dice = params.fetch("sides_of_dice").to_i
@@ -17,4 +17,8 @@ class DiceController < ApplicationController
     render({:template => "dice_templates/2d6"})
   end
 
+  def homepage
+    render({:template => "dice_templates/homepage"})
+  end
+  
 end
